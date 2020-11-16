@@ -1,0 +1,58 @@
+.tm-slider-frame {
+	&.fw-image .image img {
+		width: 100%;
+	}
+	
+	&.tm-swiper.has-pagination.pagination-style-1 {
+		margin-bottom: 50px;
+		
+		.swiper-pagination {
+			bottom: -50px;
+		}
+	}
+	
+	.swiper-container {
+		padding: 82px 0 95px;
+	}
+	
+	.static-iphone-frame-layer {
+		position: absolute;
+		left: calc(50% + 16px);
+		top: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 99;
+		width: 320px;
+		
+		img {
+			width: 100%;
+		}
+	}
+	
+	.swiper-slide {
+		transition: all 2s;
+		width: auto;
+		
+		img {
+			transition: all 2s;
+			border-radius: 8px;
+			box-shadow: 0 0 20px rgba(0, 0, 0, .08);
+		}
+		
+		&.swiper-slide-active {
+			width: 316px;
+			text-align: center;
+			
+			img {
+				width: 295px;
+			}
+		}
+	}
+}
+
+.window-resized {
+	.tm-slider-frame {
+		.static-iphone-frame-layer {
+			left: 50%;
+		}
+	}
+}
